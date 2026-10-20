@@ -107,7 +107,7 @@ class _HoldButtonState extends State<_HoldButton> {
           width: widget.size,
           height: widget.size,
           decoration: BoxDecoration(
-            color: widget.color.withOpacity(_pressed ? 0.95 : 0.65),
+            color: widget.color.withValues(alpha: _pressed ? 0.95 : 0.65),
             shape: BoxShape.circle,
             border: Border.all(color: Colors.white54, width: 2),
             boxShadow: const [

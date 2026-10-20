@@ -4,6 +4,12 @@ A polished 2D Mario-style platformer built with **Flutter** and the **[Flame](ht
 
 ![badge](https://img.shields.io/badge/Flutter-Flame-blue) ![badge](https://img.shields.io/badge/platform-Android-green)
 
+## 📸 Screenshots
+
+| Menu | Gameplay |
+|------|----------|
+| ![menu](screenshots/menu.png) | ![gameplay](screenshots/gameplay.png) |
+
 ## ✨ Features
 
 - **3 hand-crafted levels** (Green Hills, Cavern Leap, Sky Castle), each with its own themed sky.

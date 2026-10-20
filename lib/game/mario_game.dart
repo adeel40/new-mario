@@ -56,8 +56,15 @@ class MarioGame extends FlameGame
 
   @override
   Future<void> onLoad() async {
-    _prefs = await SharedPreferences.getInstance();
-    highScore = _prefs?.getInt('highScore') ?? 0;
+    // Never let storage block the game from starting.
+    try {
+      _prefs = await SharedPreferences.getInstance()
+          .timeout(const Duration(seconds: 2));
+      highScore = _prefs?.getInt('highScore') ?? 0;
+    } catch (e) {
+      debugPrint('SharedPreferences unavailable: $e');
+      _prefs = null;
+    }
 
     camera.viewfinder.anchor = Anchor.center;
   }
@@ -101,7 +108,7 @@ class MarioGame extends FlameGame
         gameWidth / 2,
         gameHeight / 2,
         (levelW - gameWidth).clamp(0, double.infinity),
-        (levelH - gameHeight).clamp(0, double.infinity) + tileSize * 2,
+        (levelH - gameHeight).clamp(0, double.infinity),
       ),
     );
 
