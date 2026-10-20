@@ -1,0 +1,42 @@
+# Flutter / Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+/build/
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+
+# Local toolchain (SDKs downloaded into the workspace for building)
+.toolchain/
+gradle-home/
+
+# Backup of the original hand-written android scaffold
+android_custom_bak/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Android
+android/local.properties
+android/.gradle/
+android/app/debug
+android/app/profile
+android/app/release
+*.keystore
+*.jks
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated Flutter files
+**/generated_plugin_registrant.*
+lib/generated_plugin_registrant.dart
+
+# Keep the pre-built APK in release/ tracked (do not ignore it)
+!release/
+!release/*.apk
